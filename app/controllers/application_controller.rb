@@ -1,3 +1,4 @@
+require "pry"
 class ApplicationController < Sinatra::Base
   configure do
     set :public_folder, 'public'
@@ -53,6 +54,7 @@ class ApplicationController < Sinatra::Base
 
   delete '/recipes/:id/' do
     @recipe = Recipe.find(params[:id])
+    binding.pry
     @recipe.destroy
     redirect "/recipes/"
   end

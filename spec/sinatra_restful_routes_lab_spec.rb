@@ -1,4 +1,4 @@
-requier 'pry'
+require 'pry'
 require 'spec_helper'
 
 describe "Recipe App" do
